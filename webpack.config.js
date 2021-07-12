@@ -3,26 +3,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    entry: './src/app.js',
+    context: path.resolve(__dirname, 'src'), // откуда беруться все файлы
+    entry: './app.js', // точка входа
     output: {
-        filename: 'bundle.[chunkhash].js',
-        path: path.resolve(__dirname, 'publick')
+        filename: 'bundle.[chunkhash].js', // сборка js
+        path: path.resolve(__dirname, 'public') // куда складывать
     },
     devServer: {
         port: 3000
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './index.html'
         }),
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(), // очищает файлы с хешом
     ],
     module: {
         rules: [
-          {
-            test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
-          },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            }
         ],
     },
 }

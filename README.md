@@ -1,1 +1,1 @@
-# jses6
+# webpack course

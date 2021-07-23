@@ -1,9 +1,24 @@
+@import '~normalize.css';
+@import 'roboto.css';
+
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+}
+
 #sidebar {
   background-color: #E57373;
   padding: 15px;
 }
 
-/* @media (min-width: 768px) {
+.logo {
+  background-image: url(../assets/logo.png);
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
   #sidebar {
     position: fixed;
     top: 0;
@@ -18,4 +33,4 @@
   #content {
     margin-left: 180px;
   }
-} */
+}

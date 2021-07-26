@@ -1,5 +1,6 @@
 composer.lock
 composer.phar
 node_modules/
+public/
 package-lock.json
 .idea

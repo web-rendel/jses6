@@ -5,6 +5,9 @@ import AplLogo from '@/assets/logo'
 import json from '@/assets/json'
 import csv from '@/assets/data.csv'
 import xml from '@/assets/data.xml'
+import 'muicss/dist/js/mui.js';
+import '@styles/main.scss';
+import './babel.js';
 
 const post = new Post('Webpack Post Title', AplLogo)
 
